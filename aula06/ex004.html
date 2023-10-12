@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formatando string</h1>
+    <script>
+        var nome = prompt("Qual é o seu nome?");
+        document.write(`Olá <strong>${nome}</strong>.<br><br>`);
+        // O .length conta quantos caracteres tem a string.
+        document.write(`Seu nome tem ${nome.length} letras<br><br>`)
+        // O .toUpperCase() transforma os caracteres em maiúsculos. 
+        document.write(`Seu nome em maiúsculas é <strong>${nome.toUpperCase()}</strong><br><br>`);
+        // O .toLowerCase() transforma os caracteres em minúsculos.
+        document.write(`Seu nome em minúsculas é <strong>${nome.toLowerCase()}</strong><br><br>`);
+        // mesmo que eu coloque um prompt embaixo, o java vai serguir a ordem pré-definida.
+        var salario = Number(prompt("Qual o seu salário?"));
+        // transformando o número acima em dados de moeda (currency), também foi escolhido o tipo da moeda, que é do Brasil (BRL)
+        document.write(`Seu salário é ${salario.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}<br><br>`);
+        document.write(`Seu salário em dólar é ${salario.toLocaleString("pt-BR", {style: "currency", currency: "USD"})}<br><br>`);
+        document.write(`Seu salário em euro é ${salario.toLocaleString("pt-BR", {style: "currency", currency: "EUR"})}<br><br>`);
+    </script>
+</body>
+</html>
