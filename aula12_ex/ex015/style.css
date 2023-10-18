@@ -7,8 +7,6 @@ body {
 
 header {
     text-align: center;
-    color: darkblue;
-    font-size: 2em;
 }
 
 main {
@@ -18,18 +16,14 @@ main {
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.527);
-    text-align: center;
 }
 
 article {
-    padding: 20px;
-    font-size: 1.5em;
+
 }
 
-img {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
+section {
+
 }
 
 footer {
