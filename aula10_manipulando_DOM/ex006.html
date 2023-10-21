@@ -9,7 +9,7 @@
         div#area {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
-            background-color: green;
+            background-color: black;
             color: white;
             width: 200px;
             height: 200px;
@@ -35,28 +35,38 @@
         // Adicionando a função para quando o mouse entrar na div.
         // Tirando a função da ** (nota) area.addEventListener("mouseenter", entrar);
         // Adicionando a função para quando o mouse sair da div.
-        area.addEventListener("mouseout", sair)
-
+        area.addEventListener("mouseout", sair);
+        // Criando a variável e adicionando o valor 0
+        let click = 0;
+        // Criando a variável e adicionando o valor 0
+        let entrou = 0;
+        // Criando a variável e adcionando o valor 0
+        let saiu = 0;
         // Instruções da função clicar
         function cliclar() {
+            click += 0.5;
             // Adicionando um texto a variável area
-            area.innerText = "Clicou!";
+            area.innerText = `Clicou ${click} vezes(s)!`;
             // Adicionando um estilo a variável area
-            area.style.background = "red";
+            area.style.background = "darkblue";
         }
 
         // intruções da função entrar
         function entrar() {
+            entrou += 1;
             // Adicionando um texto a variável area
-            area.innerText = "Entrou!";
+            area.innerText = `Entrou ${entrou} vezes(s)!`;
+            area.style.background = "green"
         }
 
         // instruções da função sair
         function sair() {
+            click = 0;
+            saiu += 0.5;
             // Adicionando um testo a variável area
-            area.innerText = "Saiu!";
+            area.innerText = `Saiu ${saiu} vezes(s)!`;
             // Adicionando um estilo a variável area
-            area.style.background = "green";
+            area.style.background = "red";
         }
     </script>
 </body>
