@@ -10,17 +10,30 @@
         <h1>Sistema de Multas</h1>
         <label for="velocidade">Velocidade do carro: </label>
         <input type="number" name="velocidade" id="velocidade">Km/h
+        <!--
+            Adicionando a função calcular no evento click, pelo HTML5
+        -->
         <input type="button" value="Verificar" onclick="calcular()">
-        <p></p>
     </section>
+    <main>
+        <p></p>
+    </main>
+    <!--ADICIONANDO JAVASCRIPT INTERNO-->
     <script>
+        // instruções da função calcular
         function calcular() {
+            // Criando e adionando na variável velocidade o HTML input com id velocidade.
             var velocidade = document.querySelector("input#velocidade");
-            velocidade = Number(velocidade.value);
+            // adicionando na variável HTML o valor digitado.
+            velocidade = velocidade.value;
+            // Criando e adionando na variável resultado
             var resultado = document.querySelector("p");
+            // Exibindo no HTML o valor rebevido
             resultado.innerHTML = `Sua velocidade atual é de <strong>${velocidade}Km/h</strong>`
             if (velocidade > 60)
+                // Adicionando a exibição o valor rebebido
                 resultado.innerHTML += `<p>Você foi <strong>MULTADO</strong> por excesso de velocidade</p>`
+            // Adicionando a exibição o valor recebido
             resultado.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
         }
     </script>

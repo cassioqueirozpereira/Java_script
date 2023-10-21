@@ -11,18 +11,34 @@
         <label for="pais">Em qual país você nasceu?</label>
         <input type="text" name="pais" id="pais">
         <input type="button" value="Enviar" onclick="regiao()">
-        <p></p>
     </main>
+    <section>
+        <p></p>
+    </section>
+    <!--ADICIONANDO JAVASCRIPT INTERNO-->
     <script>
         function regiao() {
-            var pais = document.querySelector("input#pais");
-            pais = String(pais.value);
+            // Criando a variável pais e adicionando o HTML input com id pais
+            let pais = document.querySelector("input#pais");
+            // Criando a variável p e adicionando o valor digitado pelo cliente no HTML.
+            let p = pais.value;
+            // Criando a variável pais_minuscula e transformando o valor em minúsculas
+            let pais_minuscula = p.toLowerCase();
+            // Criando a variável resultado e adicionando o HTML
             var resultado = document.querySelector("p");
-            resultado.innerHTML = `Vivendo em ${pais}`
-            if (pais == "brasil")
+            // Exibindo no HTML <p> o valor recebido.
+            resultado.innerHTML = `Vivendo em ${pais.value}`
+
+            if (pais_minuscula == "brasil")
+                // Adicionando a exibição o valor recebido.
                 resultado.innerHTML += `<p>Você é brasileiro</p>`;
             else
+                // Adicionando a exibição o valor recebido.
                 resultado.innerHTML += `<p>Você é estrangeiro</p>`;
+            // Limpando o valor do campo do input pais
+            pais.value = "";
+            // Colocando o cursor no campo do input pais
+            pais.focus();
         }
     </script>
 </body>

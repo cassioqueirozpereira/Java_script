@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
+    <!--ESTILO INTERNO-->
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -25,13 +26,21 @@
         <p id="resultado">Resultado</p>
     </section>
     
+    <!--JavaScript INTERNO-->
     <script>
+        // Adicionando valores a função somar
         function somar() {
+            // criando a variável texto1 e atribuindo a ela o texto1 pelo id HTML
             var texto1 = document.getElementById("texto1");
+            // criando a variável texto2 e adicionando a ela o texto2 pelo seletor HTML
             var texto2 = document.querySelector("input#texto2");
+            // Adicionando à variável texto1 o valor digitado no HTML e formatando para número.
             texto1 = Number(texto1.value);
+            // Adicionando à variável texto2 o valor digitado no HTML e transformando em número.
             texto2 = Number(texto2.value);
+            // Criando a variável soma e adionando a ela a soma do texto1 e do texto2
             var soma = texto1 + texto2;
+            // Substituindo o valor do id resultado no HTML, pelos novos valores adicionados.
             resultado.innerHTML = `A soma entre ${texto1} e ${texto2} é igual a <strong>${soma}</strong>`;
         }
     </script>

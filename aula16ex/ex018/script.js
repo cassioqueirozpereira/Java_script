@@ -38,16 +38,21 @@ function finalizar() {
         let total = valores.length;
         let maior = valores[0];
         let menor = valores[0];
+        let soma = 0;
         for (let pos in valores) {
+            soma += valores[pos];
             if (valores[pos] > maior)
                 maior = valores[pos];
-            else
-                menor = valores[pos]
+            if (valores[pos] < menor)
+                menor = valores[pos];
         }
+        let media = soma / total;
         resultado.innerHTML = "";
         resultado.innerHTML = `<p>Ao todo, temos ${total} números cadastrados.</p>`
-        resultado.innerHTML += `<p>O maior valor informado foi ${maior}</p>`;
-        resultado.innerHTML += `<p>O menor valor informado foi ${menor}</p>`;
+        resultado.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`;
+        resultado.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`;
+        resultado.innerHTML += `<p>A soma de todos os valores é ${soma}.</p>`;
+        resultado.innerHTML += `<p>A média dos valores digitados é ${media}.</p>`;
     }
     numero.focus();
 }
