@@ -6,7 +6,7 @@ function carregar() {
     // Criando a variável data e adicionando a data atual
     var data = new Date();
     // Criando a variável hora e adicionando a hora atual
-    var hora = 10;
+    var hora = data.getHours();
     // Criando a variável minuto e adicionando o minuto atual
     var minuto = data.getMinutes();
     // Exibindo no HTML article o valor recebido
